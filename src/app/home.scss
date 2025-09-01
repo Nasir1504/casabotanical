@@ -1,0 +1,186 @@
+.home-main {
+    width: 100%;
+    // height: 755px;
+    // background-color: #5e5e5e;
+    overflow: hidden;
+
+    .mask-container {
+        border: none;
+    }
+
+    .content {
+        position: absolute;
+        // width: 40vw;
+        // height: 25vw;
+        // background-color: linear-gradient(128deg,#000 100%, #000 100%);
+        background-color: #0000001c;
+        backdrop-filter: blur(10px);
+        border: 1px solid #ffffff10;
+        z-index: 1;
+    }
+
+
+    .categorys {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ". dining dining dining decore decore ."
+            ". storage storage accessory accessory accessory .";
+        // border: 1px solid #fff;
+
+        .box-styles {
+            box-shadow: 0px 2px 4px #0000006e;
+            overflow: hidden;
+
+            .card {
+                height: 88%;
+                overflow: hidden;
+
+                .bg-img {
+                    transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    object-fit: cover;
+                }
+
+            }
+
+            &:hover {
+                box-shadow: 0px 4px 8px #0000009c;
+                color: #fff;
+
+                .card {
+                    .bg-img {
+
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+        }
+
+        .dining {
+            grid-area: dining;
+            @extend .box-styles;
+
+        }
+
+        .decore {
+            grid-area: decore;
+            @extend .box-styles;
+
+        }
+
+        .storage {
+            grid-area: storage;
+            @extend .box-styles;
+
+        }
+
+        .accessory {
+            grid-area: accessory;
+            @extend .box-styles;
+
+        }
+    }
+
+    .philosophy {
+        // border: 1px solid #000;
+
+        .card-container {
+            // border: 1px solid #000;
+
+            .card {
+                transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                // border: 1px solid #fff;
+                &:hover {
+                    transform: scale(1.04);
+                    box-shadow: 0px 20px 20px #0000003b;
+                }
+            }
+
+
+        }
+    }
+
+
+    .collection {
+        .product-card {
+            box-shadow: 0px 2px 4px #0000006e;
+            overflow: hidden;
+
+            .card {
+                overflow: hidden;
+
+                .bg-img {
+                    transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    object-fit: cover;
+
+                    &:hover {
+                        transform: scale(1.1);
+
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 0px 4px 8px #0000009c;
+                color: #fff;
+
+                .card {
+                    .bg-img {
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+    .product {
+        overflow-y: scroll;
+        overflow: auto;
+        /* Enable scrolling */
+        -ms-overflow-style: none;
+        /* IE & Edge */
+        scrollbar-width: none;
+        // border: 1px solid #000;
+
+        .product-card {
+            box-shadow: 0px 2px 4px #0000006e;
+            overflow: hidden;
+
+            // border: 1px solid #ffffff25;
+            .card {
+                overflow: hidden;
+
+                .bg-img {
+                    transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    object-fit: cover;
+                    // border: 1px solid #fff;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 0px 4px 8px #0000009c;
+                color: #fff;
+
+                .card {
+                    .bg-img {
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

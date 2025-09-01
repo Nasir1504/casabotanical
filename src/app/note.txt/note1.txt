@@ -1,0 +1,94 @@
+Here's a clear and simple breakdown of what @theme and @layer do in Tailwind CSS v4, using plain language:
+
+@theme: Your CSS-based Design System
+
+What it does:
+
+@theme lets you define your design values—like colors, fonts, spacing—directly in your CSS file using CSS variables.
+
+Each variable automatically creates Tailwind utility classes based on its “namespace.” For instance:
+
+--color-primary → bg-primary, text-primary
+
+--font-display → font-display
+
+Tailwind CSS
+Stack Overflow
+
+Why it matters:
+
+It replaces the JavaScript-based tailwind.config.js with a simpler, CSS-native approach.
+
+Tailwind CSS
+Stack Overflow
+
+It exposes your design tokens as actual CSS variables, so you can use them both in your markup (via classes) and in your own styles.
+
+Steve Kinney
+
+@layer: Keeps Your CSS Organized and Ordered
+
+What it does:
+
+@layer uses real CSS cascade layers—thinking like folders for your CSS rules. Tailwind v4 uses several layers:
+
+theme (for your variables)
+
+base (reset and default styles)
+
+components (custom component styles)
+
+utilities (Tailwind’s utility classes)
+
+Tailwind CSS
+Tailwind CSS
+
+These layers ensure style rules don’t accidentally override each other, even if they share the same specificity.
+
+GitHub
+
+Why it matters:
+
+This means your customizations (e.g., component styles) stay neatly isolated and predictable, no matter the order you write your CSS.
+
+Tailwind CSS
+DEV Community
+
+Bringing It All Together: A Simple Example
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --color-primary: #3490dc;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+  }
+}
+
+@layer components {
+  .btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 4px;
+  }
+}
+
+
+What’s happening here:
+
+@theme sets your font and primary color as variables and gives you the font-display and text-primary utilities automatically.
+
+@layer base applies those styles at the very base, so the whole page uses your font and color.
+
+@layer components keeps button styles separate and safe from getting overridden.
+
+In Summary:
+
+Directive	Purpose	Simple Role
+@theme	Define design variables and generate utility classes via CSS variables	Your design system in CSS
+@layer	Control CSS ordering and override behavior with layered organization	Keeps styles neat and predictable

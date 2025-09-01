@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
+//fonts
+import { Playfair_Display } from "next/font/google";
+
+//styles
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+//components
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
   subsets: ["latin"],
+  // optionally you can add other options like weight, display, fallback
+  variable: "--font-playfair-display",
+  display: "swap", // ensures graceful loading :contentReference[oaicite:1]{index=1}
 });
 
 export const metadata: Metadata = {
@@ -23,11 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={playfair.variable}>
+      <body className="antialiased">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
