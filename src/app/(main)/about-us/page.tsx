@@ -3,8 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 //imgs
-import AboutUsImg from "../assets/imgs/about-us/about-us_image.png";
-
+import AboutUsImg from "../../assets/imgs/about-us/about-us_image.png";
+ 
+export const metadata = {
+    title: "About-us",
+}
 
 export default function page() {
     return (

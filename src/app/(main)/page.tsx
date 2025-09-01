@@ -7,29 +7,29 @@ import Link from "next/link";
 import "./home.scss";
 
 //imgs
-import jewelryOrganizerImg from "./assets/imgs/home/jewelry-organizer.png";
-import welcomeContentImg from "./assets/imgs/home/first_image.png";
-import DiningImg from "./assets/imgs/home/dining.png";
-import DecorImg from "./assets/imgs/home/decor.png";
-import AccessoryImg from "./assets/imgs/home/accessory.png";
-import StorageImg from "./assets/imgs/home/storage.png";
+import jewelryOrganizerImg from "../assets/imgs/home/jewelry-organizer.png";
+import welcomeContentImg from "../assets/imgs/home/first_image.png";
+import DiningImg from "../assets/imgs/home/dining.png";
+import DecorImg from "../assets/imgs/home/decor.png";
+import AccessoryImg from "../assets/imgs/home/accessory.png";
+import StorageImg from "../assets/imgs/home/storage.png";
 
-import DesertImg from "./assets/imgs/home/desert.png";
-import CelestialImg from "./assets/imgs/home/celestial.png";
-import EmeraldImg from "./assets/imgs/home/emerald.png";
-import TangerineImg from "./assets/imgs/home/tangerine.png";
+import DesertImg from "../assets/imgs/home/desert.png";
+import CelestialImg from "../assets/imgs/home/celestial.png";
+import EmeraldImg from "../assets/imgs/home/emerald.png";
+import TangerineImg from "../assets/imgs/home/tangerine.png";
 
-import JewBox from "./assets/imgs/home/jewellery-box.png";
-import Tray from "./assets/imgs/home/faux-leather-organizer-tray-set-of-3.png";
-import Frame from "./assets/imgs/home/photo-frame-stand.png";
-import placemats from "./assets/imgs/home/placemats.png";
-import Holder from "./assets/imgs/home/cutlery-holder.png";
-import Napkin from "./assets/imgs/home/napkin-rings.png";
-import Vase from "./assets/imgs/home/flower-rectangular-vase.png";
-import Coaster from "./assets/imgs/home/coaster-set.png";
-import Tissue from "./assets/imgs/home/tissue-box.png";
+import JewBox from "../assets/imgs/home/jewellery-box.png";
+import Tray from "../assets/imgs/home/faux-leather-organizer-tray-set-of-3.png";
+import Frame from "../assets/imgs/home/photo-frame-stand.png";
+import placemats from "../assets/imgs/home/placemats.png";
+import Holder from "../assets/imgs/home/cutlery-holder.png";
+import Napkin from "../assets/imgs/home/napkin-rings.png";
+import Vase from "../assets/imgs/home/flower-rectangular-vase.png";
+import Coaster from "../assets/imgs/home/coaster-set.png";
+import Tissue from "../assets/imgs/home/tissue-box.png";
 
-import Rutezin from "./assets/imgs/home/rutezin.png";
+import Rutezin from "../assets/imgs/home/rutezin.png";
 
 const circleMaskedImg = "https://i.ibb.co/27SZb51/mask-circle643.png";
 

@@ -4,11 +4,11 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 
 //styles
-import "./globals.css";
+import "../globals.css";
 
 //components
-import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
+import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],

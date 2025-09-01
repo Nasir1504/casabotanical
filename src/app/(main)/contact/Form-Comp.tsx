@@ -1,19 +1,13 @@
 "use client"
 
-export default function page() {
+export default function FormComp() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     }
     return (
-        <div className="contact-main py-40 flex justify-center items-center flex-col">
-            <h3 className='text-[2rem] w-[60%] text-left'>Contact</h3>
-            <br />
-            <br />
-            <br />
-
             <form
-                className="flex flex-wrap gap-x-[2%] gap-y-[2vh] w-[60%]"
+                className="form-main flex flex-wrap gap-x-[2%] gap-y-[2vh] w-full"
                 onSubmit={handleSubmit}
             >
                 <input
@@ -51,7 +45,5 @@ export default function page() {
                     >Send</button>
                 </div>
             </form>
-
-        </div>
     )
 }
