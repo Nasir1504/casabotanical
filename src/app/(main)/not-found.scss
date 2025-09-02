@@ -1,0 +1,25 @@
+
+.not-found-main{
+
+    @keyframes textAnimation {
+        0%{
+            stroke-dashoffset: 50000;
+        }
+        // 80%{
+        //     // fill: transparent;
+        // }
+        100%{
+            stroke-dashoffset: 0;
+        }
+    }
+ .svg-main{
+    path{
+        fill: transparent;
+        stroke: #835137;
+        // stroke-width: 1;
+        stroke-dasharray: 50000;
+        stroke-dashoffset: 5000;
+        animation: 10s textAnimation ease-in-out infinite;
+    }
+ }   
+}

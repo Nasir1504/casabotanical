@@ -14,7 +14,7 @@ export default function Navbar() {
 
 
   return (
-    <main className='navbar-main grid grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_2fr_1fr] bg-[#835137] w-full h-25 items-center fixed z-10'>
+    <main className='navbar-main grid grid-cols-[1fr_4fr_1fr] bg-[#835137] w-full h-25 items-center fixed z-10'>
 
       <div className='menu-sec order-1 md:order-2 h-full w-full flex items-center max-md:pl-10'>
 

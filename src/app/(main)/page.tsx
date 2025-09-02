@@ -303,7 +303,7 @@ export default function Home() {
           {
             COLLECTION_DATA.map((item, i) => {
               return (
-                <Link href="" passHref className="product-card h-4/4 flex flex-col justify-start items-center relative">
+                <Link key={i} href="###" passHref className="product-card h-4/4 flex flex-col justify-start items-center relative">
                   <div className="card w-full">
                     <Image src={item.imgURL} alt=""
                       className="bg-img w-full h-full"
@@ -351,7 +351,7 @@ export default function Home() {
           {
             PRODUCT_DATA.map((item, i) => {
               return (
-                <Link href={item.linkTo} passHref key={i}
+                <Link key={i} href={item.linkTo} passHref 
                   className="product-card flex flex-col justify-start items-center relative h-4/4"
                 >
                   <div className="card w-full">
