@@ -4,7 +4,7 @@ import Link from "next/link";
 
 //imgs
 import AboutUsImg from "../../assets/imgs/about-us/about-us_image.png";
- 
+
 export const metadata = {
     title: "About-us",
 }
@@ -17,9 +17,10 @@ export default function page() {
                 className="w-[50%] h-[85vh]"
                 src={AboutUsImg}
                 alt=""
-
+                placeholder="blur"
+                loading="lazy"
                 style={{
-                    objectFit:"cover"
+                    objectFit: "cover"
                 }}
             />
 

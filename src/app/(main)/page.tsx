@@ -167,8 +167,12 @@ export default function Home() {
       <div className="mask-container relative w-full max-lg:h-[650px] lg:h-[750px] xl:h-[950px] flex justify-center items-center bg-[#000]" >
 
         <div className="mask flex justify-center items-center relative w-full h-full ">
-          <Image src={jewelryOrganizerImg} alt="" className="w-full h-full mask-no-repeat"
-
+          <Image
+            src={jewelryOrganizerImg}
+            alt=""
+            className="w-full h-full mask-no-repeat"
+            placeholder="blur"
+            loading="lazy"
             style={{
               objectFit: 'cover',
               WebkitMaskPosition: `${coords.x - 165}px ${(coords.y - 155) + scrolling}px`,
@@ -177,7 +181,13 @@ export default function Home() {
 
             }}
           />
-          <Image src={jewelryOrganizerImg} alt="" className="w-full h-full opacity-20 absolute cursor-none" objectFit="cover" style={{ objectFit: 'cover' }} />
+          <Image
+            src={jewelryOrganizerImg}
+            alt=""
+            placeholder="blur"
+            loading="lazy"
+            className="w-full h-full opacity-20 absolute cursor-none"
+            style={{ objectFit: 'cover' }} />
         </div>
 
 
@@ -197,7 +207,11 @@ export default function Home() {
 
       <div className="welcome-content relative w-full text-[#c5c5c5] max-lg:h-[500px] lg:h-[655px] xl:h-[785px] flex justify-center items-center gap-20 bg-[#5e5e5e]" >
 
-        <Image src={welcomeContentImg} alt=""
+        <Image
+          src={welcomeContentImg}
+          alt=""
+          placeholder="blur"
+          loading="lazy"
           className="w-[35%] objectFit-contain rounded-md md:rounded-lg lg:rounded-xl"
         />
 
@@ -227,7 +241,11 @@ export default function Home() {
 
         <Link href="" passHref className="dining flex flex-col justify-start items-center gap-3 relative">
           <div className="card w-full">
-            <Image src={DiningImg} alt=""
+            <Image
+              src={DiningImg}
+              alt=""
+              placeholder="blur"
+              loading="lazy"
               className="bg-img w-full h-full hover:"
             />
           </div>
@@ -237,6 +255,8 @@ export default function Home() {
         <Link href="" passHref className="decore flex flex-col justify-start items-center gap-3 relative">
           <div className="card w-full">
             <Image src={DecorImg} alt=""
+              placeholder="blur"
+              loading="lazy"
               className="bg-img w-full h-full hover:"
             />
           </div>
@@ -255,6 +275,8 @@ export default function Home() {
         <Link href="" passHref className="accessory flex flex-col justify-start items-center gap-3 relative">
           <div className="card w-full">
             <Image src={AccessoryImg} alt=""
+              placeholder="blur"
+              loading="lazy"
               className="bg-img w-full h-full hover:"
             />
           </div>
@@ -306,6 +328,8 @@ export default function Home() {
                 <Link key={i} href="###" passHref className="product-card h-4/4 flex flex-col justify-start items-center relative">
                   <div className="card w-full">
                     <Image src={item.imgURL} alt=""
+                      placeholder="blur"
+                      loading="lazy"
                       className="bg-img w-full h-full"
                     />
                   </div>
@@ -351,11 +375,13 @@ export default function Home() {
           {
             PRODUCT_DATA.map((item, i) => {
               return (
-                <Link key={i} href={item.linkTo} passHref 
+                <Link key={i} href={item.linkTo} passHref
                   className="product-card flex flex-col justify-start items-center relative h-4/4"
                 >
                   <div className="card w-full">
                     <Image src={item.imgURL} alt=""
+                      placeholder="blur"
+                      loading="lazy"
                       className="bg-img w-full h-5/5"
                     />
                   </div>
@@ -386,6 +412,8 @@ export default function Home() {
       <div className="welcome-content relative w-full max-lg:h-[500px] lg:h-[645px] xl:h-[785px] flex justify-center items-center gap-20 bg-[#5e5e5e]" >
 
         <Image src={Rutezin} alt=""
+          placeholder="blur"
+          loading="lazy"
           className="w-[45%] objectFit-contain rounded-md md:rounded-lg lg:rounded-xl"
         />
 
