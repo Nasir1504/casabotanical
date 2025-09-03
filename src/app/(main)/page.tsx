@@ -170,7 +170,7 @@ export default function Home() {
           <Image
             src={jewelryOrganizerImg}
             alt=""
-            className="w-full h-full mask-no-repeat"
+            className="w-full h-full mask-no-repeat max-lg:hidden"
             placeholder="blur"
             loading="lazy"
             style={{
@@ -186,7 +186,7 @@ export default function Home() {
             alt=""
             placeholder="blur"
             loading="lazy"
-            className="w-full h-full opacity-20 absolute cursor-none"
+            className="w-full h-full opacity-20 max-lg:opacity-100 absolute cursor-none"
             style={{ objectFit: 'cover' }} />
         </div>
 

@@ -1,10 +1,11 @@
 @import 'tailwindcss';
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@200,300;400;500;600;700;800;900&display=swap');
 
 :root {
   --background: #835137;
   --foreground: #ffffff;
+  
 }
 
 @theme inline {
@@ -22,12 +23,26 @@
   --breakpoint-md: 1024px;
   --breakpoint-lg: 1530px;
   --breakpoint-xl: 1920px;
+
+   --animate-slide-left: slide-left 12s linear infinite;
+
+  @keyframes slide-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-140.8%); }
+  }
 }
 
 @layer base {
   html {
     @apply font-display;
     /* Or alternatively: font-family: var(--font-display); */
+  }
+  
+}
+
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
   }
 }
 
