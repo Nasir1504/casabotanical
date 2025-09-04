@@ -10,9 +10,6 @@ import "./collections.scss";
 
 export default function Collections() {
 
-  const data = Array.from({ length: 10 }, (_, i) => { return `Item` })
-
-
   return (
     <div className="collections-main w-full h-auto flex flex-col justify-center items-center bg-[#232321]">
       <div className="w-full h-[150px]" />
