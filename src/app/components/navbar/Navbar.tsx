@@ -161,7 +161,10 @@ export default function Navbar() {
 
       </div>
 
-      <section className={`shop-web-main w-full absolute top-[100%] h-[300px] bg-[#835137] border-t border-[#c5c5c530] ${shopDrawer ? 'block' : 'hidden'}`}>
+      <section
+        className={`shop-web-main w-full absolute top-[100%] h-[300px] bg-[#835137] border-t border-[#c5c5c530] ${shopDrawer ? 'block' : 'hidden'}`}
+        onMouseOut={() => setShopDrawer(false)}
+      >
 
       </section>
     </main>

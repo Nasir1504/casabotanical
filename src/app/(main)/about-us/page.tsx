@@ -11,10 +11,10 @@ export const metadata = {
 
 export default function page() {
     return (
-        <div className="about-us-main bg-[#232321] flex justify-center items-start py-45 px-45 max-lg:py-35 max-lg:px-25">
+        <div className="about-us-main bg-[#232321] w-fullh-auto flex justify-center items-start py-45 px-20 max-lg:py-35 max-lg:px-25 relative">
 
             <Image
-                className="w-[50%] h-[85vh]"
+                className="w-[45%] xl:h-[680px] lg:h-[620px] max-lg:h-[580px]"
                 src={AboutUsImg}
                 alt=""
                 placeholder="blur"
@@ -27,7 +27,7 @@ export default function page() {
             <section className="right-content flex flex-col pl-20 text-[#c5c5c5] gap-5">
                 <h3 className="xl:text-[2rem] lg:text-[1.6rem] max-lg:text-[1.4rem]">WELCOME TO CASA BOTANICAL!</h3>
 
-                <p className="xl:text-[1.1rem] lg:text-[1rem] max-lg:text-[0.9rem]">
+                <p className="xl:text-[1.1rem] lg:text-[0.9rem] max-lg:text-[0.85rem] tracking-wider">
                     Welcome to <b>Casa Botanical</b>, where timeless design meets mindful craftsmanship.
                     <br />
                     <br />
