@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 //styles
 import './navbar.scss'
 
@@ -11,7 +12,7 @@ import Logo from '../../assets/imgs/navbar/casa_botanical_logo.png'
 
 export default function Navbar() {
   const pathname = usePathname();
-
+  const [shopDrawer, setShopDrawer] = useState(false)
 
   return (
     <main className='navbar-main grid grid-cols-[1fr_4fr_1fr] bg-[#835137] w-full h-25 items-center fixed z-10'>
@@ -31,13 +32,16 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link
-              href="/collections"
-              passHref
-              className={`text-[#D9D9D9] hover:text-white no-underline underline-offset-2 ${pathname === '/collections' ? 'underline text-white ' : 'hover:underline'}`}
+            <span
+              // href="/collections"
+              // href="/shop"
+
+              // passHref
+              className={`text-[#D9D9D9] cursor-pointer hover:text-white no-underline underline-offset-2 ${shopDrawer ? 'underline text-white ' : 'hover:underline'}`}
+              onClick={() => { setShopDrawer(p => !p) }}
             >
               Shop
-            </Link>
+            </span>
           </li>
 
           <li>
@@ -156,6 +160,10 @@ export default function Navbar() {
         </svg>
 
       </div>
+
+      <section className={`shop-web-main w-full absolute top-[100%] h-[300px] bg-[#835137] border-t border-[#c5c5c530] ${shopDrawer ? 'block' : 'hidden'}`}>
+
+      </section>
     </main>
   )
 }

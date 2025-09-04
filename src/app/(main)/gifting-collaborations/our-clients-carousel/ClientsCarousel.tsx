@@ -41,7 +41,7 @@ export default function ClientsCarousel() {
 
     ]
     return (
-        <div className="w-full h-[300px] carousel-wrapper overflow-hidden whitespace-nowrap relative group">
+        <div className="w-full h-full carousel-wrapper overflow-hidden whitespace-nowrap relative group">
             <div className="w-full h-full flex animate-slide-left hover:animation-pause group-hover:animation-pause gap-[5%] items-center">
 
                 {/* <!-- First set of 8 items --> */}

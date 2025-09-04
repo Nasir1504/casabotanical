@@ -11,7 +11,7 @@ import "./form-styles.scss";
 export default function CollaborateForm() {
     const [phone, setPhone] = useState<Value>();
 
-    console.log(phone);
+    // console.log(phone);
 
     return (
         <div className="collaborate-form-main h-auto">
@@ -115,9 +115,11 @@ export default function CollaborateForm() {
                     className="text-[1rem] max-md:rounded-md lg:rounded-lg"
                 />
                 <button
-                    className="bg-[#835137] py-[0.5em] rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:shadow-lg text-center text-[#fff] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.4rem] hover:text-[#fff]"
+                    className="bg-[#835137] py-[0.5em] rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:shadow-lg text-center text-[#c5c5c5] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.4rem] hover:text-[#fff]"
                 >Shop Now</button>
             </form>
+
+            <div className="w-full h-[100px]"/>
         </div >
     );
 }

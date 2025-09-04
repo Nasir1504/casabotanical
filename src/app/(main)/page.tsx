@@ -239,7 +239,7 @@ export default function Home() {
 
       <div className="categorys relative w-full max-lg:h-[700px] lg:h-[900px] xl:h-[1050px] text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4" >
 
-        <Link href="" passHref className="dining flex flex-col justify-start items-center gap-3 relative">
+        <Link href="" passHref className="dining flex flex-col justify-start items-center gap-3 relative w-full h-full">
           <div className="card w-full">
             <Image
               src={DiningImg}
@@ -249,7 +249,7 @@ export default function Home() {
               className="bg-img w-full h-full hover:"
             />
           </div>
-          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">DINING &#x2192;</p>
+          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">DINING <span>&#x2192;</span></p>
 
         </Link>
         <Link href="" passHref className="decore flex flex-col justify-start items-center gap-3 relative">
@@ -260,7 +260,7 @@ export default function Home() {
               className="bg-img w-full h-full hover:"
             />
           </div>
-          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">HOME DECORE &#x2192;</p>
+          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">HOME DECORE <span>&#x2192;</span></p>
 
         </Link>
         <Link href="" passHref className="storage flex flex-col justify-start items-center gap-3 relative">
@@ -269,7 +269,7 @@ export default function Home() {
               className="bg-img w-full h-full hover:"
             />
           </div>
-          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">STORAGE &#x2192;</p>
+          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">STORAGE <span>&#x2192;</span></p>
 
         </Link>
         <Link href="" passHref className="accessory flex flex-col justify-start items-center gap-3 relative">
@@ -280,7 +280,7 @@ export default function Home() {
               className="bg-img w-full h-full hover:"
             />
           </div>
-          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">DINING ACCESSSORY SETS &#x2192;</p>
+          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">DINING ACCESSSORY SETS <span>&#x2192;</span></p>
 
         </Link>
 
@@ -333,7 +333,7 @@ export default function Home() {
                       className="bg-img w-full h-full"
                     />
                   </div>
-                  <p className="lg:text-[0.95rem] xl:text-[1.2rem] capitalize py-4">{item.name} &#x2192;</p>
+                  <p className="lg:text-[0.95rem] xl:text-[1.2rem] capitalize py-4">{item.name} <span>&#x2192;</span></p>
 
                 </Link>
               )
@@ -385,7 +385,7 @@ export default function Home() {
                       className="bg-img w-full h-5/5"
                     />
                   </div>
-                  <p className="lg:text-[0.95rem] xl:text-[1.2rem] py-4">{item.name} &#x2192;</p>
+                  <p className="lg:text-[0.95rem] xl:text-[1.2rem] py-4">{item.name} <span>&#x2192;</span></p>
 
                 </Link>
               )
