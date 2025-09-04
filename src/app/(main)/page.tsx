@@ -149,7 +149,7 @@ export default function Home() {
     };
   }, []);
   useEffect(() => {
-    const handleScroll = (event: Event) => {
+    const handleScroll = () => {
       setScrolling(window.scrollY);
     };
 
