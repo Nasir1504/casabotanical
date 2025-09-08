@@ -1,13 +1,10 @@
 
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 //imgs
 import AboutUsImg from "../../assets/imgs/about-us/about-us_image.png";
 
-export const metadata = {
-    title: "About-us",
-}
 
 export default function page() {
     return (
@@ -17,7 +14,7 @@ export default function page() {
                 className="w-[45%] xl:h-[680px] lg:h-[620px] max-lg:h-[580px]"
                 src={AboutUsImg}
                 alt=""
-                placeholder="blur"
+                placeholder="empty"
                 loading="lazy"
                 style={{
                     objectFit: "cover"

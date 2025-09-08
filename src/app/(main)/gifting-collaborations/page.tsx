@@ -1,6 +1,6 @@
 
-import Image from "next/image"
 import Link from "next/link";
+import Image from "next/image"
 
 //components
 import ClientsCarousel from "./our-clients-carousel/ClientsCarousel";
@@ -160,12 +160,8 @@ export default function GiftingCollaborations() {
 
             {/* ----------------------------------------------------------------------- */}
 
-            <h3 className="max-lg:text-[1.1rem] lg:text-[1.3rem] xl:text-[1.5rem] tracking-widest font-[600] xl:w-[580px] lg:w-[520px] max-xl:w-[420px] text-center">
-                {"Let's Create Something Beautiful Together"}
-            </h3>
-            <p className="max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] tracking-widest] xl:w-[540px] lg:w-[440px] max-xl:w-[340px] text-center">
-                {"Elevate Your Experience. Impress Your Guests. Delight Your Clients"}
-            </p>
+            <h3 className="max-lg:text-[1.1rem] lg:text-[1.3rem] xl:text-[1.5rem] tracking-widest font-[600] xl:w-[580px] lg:w-[520px] max-xl:w-[420px] text-center">{"Let's Create Something Beautiful Together"}</h3>
+            <p className="max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] tracking-widest] xl:w-[540px] lg:w-[440px] max-xl:w-[340px] text-center">Elevate Your Experience. Impress Your Guests. Delight Your Clients</p>
             <br />
 
             <section className="xl:w-[580px] w-[580px]">
