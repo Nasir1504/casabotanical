@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 
 //imgs
 import LogoImg from "../../assets/imgs/navbar/casa_botanical_logo.png";
@@ -10,23 +11,23 @@ export default function Footer() {
     const SERVICES_DATA = [
         {
             name: "home decore",
-            linkTo: "###"
+            linkTo: "/collections/home-decor"
         },
         {
             name: "dining",
-            linkTo: "###"
+            linkTo: "/collections/dining"
         },
         {
             name: "storage",
-            linkTo: "###"
+            linkTo: "/collections/storage"
         },
         {
             name: "collections",
-            linkTo: "###"
+            linkTo: "/collections/collections"
         },
         {
             name: "contact us",
-            linkTo: "###"
+            linkTo: "/contact"
         },
 
     ]
@@ -35,23 +36,23 @@ export default function Footer() {
     const QUICK_LINKS = [
         {
             name: "about case botanical",
-            linkTo: "###"
+            linkTo: "/about-us"
         },
         {
             name: "shipping policy",
-            linkTo: "###"
+            linkTo: "/shipping-policy"
         },
         {
             name: "terms & conditions",
-            linkTo: "###"
+            linkTo: "/terms-conditions"
         },
         {
             name: "privacy policy",
-            linkTo: "###"
+            linkTo: "/privacy-policy"
         },
         {
             name: "return & replacement policy",
-            linkTo: "###"
+            linkTo: "return-replacement-policy"
         },
 
     ]
@@ -86,10 +87,12 @@ export default function Footer() {
                         {
                             SERVICES_DATA.map((item, i) => {
                                 return (
-                                    <p
+                                    <Link
                                         key={i}
                                         className="max-lg:text-[0.7rem] text-[0.9rem] font-[300] hover:text-[#fff] hover:underline cursor-pointer capitalize"
-                                    >{item.name}</p>
+                                        href={`${item.linkTo}`}
+                                        passHref
+                                    >{item.name}</Link>
                                 )
                             })
                         }
@@ -102,16 +105,18 @@ export default function Footer() {
                 {/* -------------------------------------------------- */}
 
                 <div className="h-full flex-2 flex flex-col justify-center items-start gap-5">
-                    <h3 className="max-lg:text-[1rem] text-[1.2rem] text-[#fff]">Services</h3>
+                    <h3 className="max-lg:text-[1rem] text-[1.2rem] text-[#fff]">Quick links</h3>
 
                     <div className="flex flex-col justify-center items-start gap-3">
                         {
                             QUICK_LINKS.map((item, i) => {
                                 return (
-                                    <p
+                                    <Link
                                         key={i}
                                         className="max-lg:text-[0.7rem] text-[0.9rem] font-[300] hover:text-[#fff] hover:underline cursor-pointer capitalize"
-                                    >{item.name}</p>
+                                        href={`${item.linkTo}`}
+                                        passHref
+                                    >{item.name}</Link>
                                 )
                             })
                         }

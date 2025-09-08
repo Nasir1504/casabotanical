@@ -19,6 +19,7 @@
   /* ----Custom Screen Breakpoint----  */
   --breakpoint-*: initial;
 
+  --breakpoint-xs: 600px;
   --breakpoint-sm: 900px;
   --breakpoint-md: 1024px;
   --breakpoint-lg: 1500px;
