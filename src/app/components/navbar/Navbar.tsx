@@ -51,11 +51,25 @@ export default function Navbar() {
                         {item.name}
                       </span>
                       <span
-                        className={`inline-block mt-[0.1em]`}
-                        style={{ transform: `rotate(${shopDrawer ? -90 : 90}deg)` }}
+                        className={`inline-block mt-[0.3em] flex ${pathname.startsWith(item.linkTo) ? "text-white" : "hover:text-white"} text-#[#fff]`}
+                        style={{ transform: `rotate(${shopDrawer ? 180 : 0}deg)` }}
 
                       >
-                        &#x3e;
+                        <svg
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg "
+                          className="xl:w-[1.1rem] xl:h-[1.1rem] lg:w-[1rem]  lg:h-[1rem]  max-lg:w-[0.9rem]  max-lg:h-[0.9rem]"
+                        >
+                          <rect width={48} height={48} fill="white" fillOpacity={0.01} />
+                          <path
+                            d="M37 18L25 30L13 18"
+                            stroke="currentColor"
+                            strokeWidth={4}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
                       </span>
                     </div>
                   </div>
