@@ -31,13 +31,14 @@ export default function Navbar() {
 
       {/* ---------------------------NAV MENU--------------------------- */}
       <div className="menu-sec order-1 md:order-2 h-full w-full flex items-center max-md:pl-10">
-        <ul className="hidden md:flex flex-col md:flex-row justify-center gap-5 items-center w-full list-none max-lg:text-[0.85rem] lg:text-[0.95rem] xl:text-[1.05rem] capitalize">
+        <ul className="hidden md:flex flex-col md:flex-row justify-center gap-5 items-center w-full list-none max-lg:text-[0.85rem] lg:text-[0.95rem] xl:text-[1.05rem] capitalize select-none">
           {
             NAVBAR_DATA.map((item, i) => {
               return (<>
                 {item.name === "shop" ?
                   <li>
                     <span
+                      key={i}
                       className={`text-[#D9D9D9] cursor-pointer hover:text-white no-underline underline-offset-2 flex justify-center items-start gap-[0.15em]`}
                       onClick={() => {
                         setShopDrawer((p) => !p);
@@ -49,7 +50,9 @@ export default function Navbar() {
                         {item.name}
                       </span>
                       <span
-                        className={`transform rotate-[${shopDrawer ? "-90" : "90"}deg] inline-block mt-[0.1em]`}
+                        className={`inline-block mt-[0.1em]`}
+                        style={{ transform: `rotate(${shopDrawer ? -90 : 90}deg)` }}
+
                       >
                         &#x3e;
                       </span>
