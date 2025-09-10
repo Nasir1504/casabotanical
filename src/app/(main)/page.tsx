@@ -134,6 +134,30 @@ export default function Home() {
     },
   ]
 
+  const CATEGORY_DATA = [
+    {
+      name: "dining",
+      imgURL: DiningImg,
+      linkTo: "###"
+    },
+    {
+      name: "home decore",
+      imgURL: DecorImg,
+      linkTo: "###"
+    },
+    {
+      name: "storage",
+      imgURL: StorageImg,
+      linkTo: "###"
+    },
+    {
+      name: "dining accessory sets",
+      imgURL: AccessoryImg,
+      linkTo: "###"
+    }
+
+  ]
+
   useEffect(() => {
     const handleWindowMouseMove = (event: MouseEvent) => {
       setCoords({
@@ -164,7 +188,7 @@ export default function Home() {
   return (
     <main className="home-main relative flex justify-center items-center flex-col">
 
-      <div className="mask-container relative w-full max-lg:h-[650px] lg:h-[750px] xl:h-[950px] flex justify-center items-center bg-[#000]" >
+      <div className="mask-container relative w-full max-xs:h-[750px] max-lg:h-[650px] lg:h-[750px] xl:h-[950px] flex justify-center items-center bg-[#000]" >
 
         <div className="mask flex justify-center items-center relative w-full h-full ">
           <Image
@@ -191,12 +215,12 @@ export default function Home() {
         </div>
 
 
-        <div className="content absolute w-[40vw] h-[15vw] flex justify-center items-center flex-col gap-10 z-5">
-          <p className="max-lg:text-[1rem] lg:text-[1.2rem] xl:text-[1.6rem] text-[#c5c5c5]">Welcome to Casa Botanical</p>
+        <div className="content absolute max-xxs:w-[20em] max-xxs:h-[14em] max-xs:w-[26em] max-xs:h-[14em] max-md:w-[32em] max-md:h-[15em] md:w-[40em] md:h-[16em] flex justify-center items-center flex-col gap-10 z-5">
+          <p className=" md:text-[2rem] max-md:text-[2rem] max-sm:text-[1.6rem] max-xxs:text-[1.4rem] max-xxs:font-[600] text-[#c5c5c5]">Welcome to Casa Botanical</p>
           <Link
             href="/collections"
             passHref
-            className="bg-[#835137] py-[0.6rem] px-[2.5rem] rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:shadow-lg text-center text-[#c5c5c5] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.4rem] hover:text-[#fff]"
+            className="bg-[#835137] py-[0.6rem] px-[2.5rem] rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:shadow-lg text-center text-[#c5c5c5] max-sm:text-[1.2rem] max-md:text-[1.6rem] md:text-[1.4rem] max-xxs:font-[600] hover:text-[#fff]"
           >Shop Now</Link>
         </div>
 
@@ -205,27 +229,32 @@ export default function Home() {
 
       {/* --------------------------------------------------------------------------- */}
 
-      <div className="welcome-content relative w-full text-[#c5c5c5] max-lg:h-[500px] lg:h-[655px] xl:h-[785px] flex justify-center items-center gap-20 bg-[#5e5e5e]" >
+      <div className={` relative
+        welcome-content relative w-full text-[#c5c5c5] 
+        max-xs:h-[900px] max-sm:h-[1100px] max-md:h-[600px] max-lg:h-[500px] lg:h-[655px] xl:h-[785px] 
+        flex max-sm:flex-col justify-center items-center max-md:gap-10 md:gap-20 bg-[#5e5e5e]
+        `}
+      >
 
         <Image
           src={welcomeContentImg}
           alt=""
           placeholder="blur"
           loading="lazy"
-          className="w-[35%] objectFit-contain rounded-md md:rounded-lg lg:rounded-xl"
+          className="max-xs:w-[85%] max-sm:w-[75%] max-lg:w-[45%] lg:w-[35%] objectFit-contain rounded-md md:rounded-lg lg:rounded-xl"
         />
 
-        <article className="w-[40%] max-lg:py-5 max-lg:px-6 lg:px-15 xl:px-20 bg-[#232321] py-12">
-          <h3 className="max-md:text-[1rem]  lg:text-[1.26rem] xl:text-[1.6rem]">WELCOME TO CASA BOTANICAL!</h3>
+        <article className="max-sm:w-[90%] sm:w-[40%] max-lg:py-5 max-lg:px-6 lg:px-15 xl:px-20 bg-[#232321] py-12">
+          <h3 className="max-xs:text-[1rem] max-md:text-[1.2rem] lg:text-[1.26rem] xl:text-[1.6rem]">WELCOME TO CASA BOTANICAL!</h3>
           <br />
 
           <p
-            className="font-thin max-lg:text-[0.8rem] lg:text-[0.95rem] xl:text-[1.2rem]"
+            className="font-thin max-xs:text-[0.85rem] max-lg:text-[1rem] lg:text-[0.95rem] xl:text-[1.2rem]"
           >Casa Botanical was born from the belief that the objects we use every day should bring both beauty and purpose to our lives. We create elevated home and tableware—crafted in rich faux leather with meticulous stitching—that transforms everyday moments into something special.
           </p>
           <br />
           <p
-            className="font-thin max-lg:text-[0.8rem] lg:text-[0.95rem] xl:text-[1.2rem]"
+            className="font-thin max-xs:text-[0.85rem] max-lg:text-[1rem] lg:text-[0.95rem] xl:text-[1.2rem]"
           >Our signature pieces—from refined cutlery holders and luxurious coasters to versatile trays and elegant vases—are designed to be both functional and striking. Each item carries our hallmark blend of understated luxury, warm earth tones, and botanical inspiration that seamlessly fits into any modern, inviting space.&nbsp;
             <Link href="/blogs" passHref className="text-[#835137] underline underline-offset-2" >Read more</Link>
           </p>
@@ -237,7 +266,10 @@ export default function Home() {
 
       <h3 className="w-full text-center font-[600] pt-10 max-lg:text-[1rem] lg:text-[1.26rem] xl:text-[1.6rem] bg-[#232321] text-[#c5c5c5]">SHOP BY CATEGORY</h3>
 
-      <div className="categorys relative w-full max-lg:h-[700px] lg:h-[900px] xl:h-[1050px] text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4" >
+      {/* --------------------------- WEB -------------------------- */}
+      <div className={`categorys-web relative w-full max-lg:h-[700px] lg:h-[900px] xl:h-[1050px] 
+        grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr_1fr] text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4 max-sm:hidden
+        `}>
 
         <Link href="" passHref className="dining flex flex-col justify-start items-center gap-3 relative w-full h-full">
           <div className="card w-full">
@@ -277,12 +309,49 @@ export default function Home() {
             <Image src={AccessoryImg} alt=""
               placeholder="blur"
               loading="lazy"
-              className="bg-img w-full h-full hover:"
+              className="bg-img w-full h-full"
             />
           </div>
           <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">DINING ACCESSSORY SETS <span>&#x2192;</span></p>
 
         </Link>
+
+      </div>
+
+      {/* --------------------------- MOBILE -------------------------- */}
+
+      <div className={`categorys-mobile relative w-full max-xs:h-[450px] h-[700px] text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4 
+        flex snap-x snap-mandatory snap-center overflow-x-scroll
+        `}>
+        {
+          CATEGORY_DATA.map((item, i) => {
+            return (
+              <Link
+                key={i}
+                href={item.linkTo}
+                passHref
+                className="dining flex flex-col justify-start items-center max-xs:gap-2 gap-5 relative min-w-full h-full shadow-[1px_2px_4px_#00000060]"
+              >
+                <div className="card w-full h-[88%] overflow-hidden">
+                  <Image
+                    src={item.imgURL}
+                    alt=""
+                    placeholder="blur"
+                    loading="lazy"
+                    className="bg-img w-full h-full"
+                    style={{
+                      objectFit: "cover"
+                    }}
+                  />
+                </div>
+                <p className="max-xs:text-[1rem] text-[1.4rem] uppercase font-[600] tracking-wider">{item.name} <span>&#x2192;</span></p>
+
+              </Link>
+            )
+          })
+        }
+
+
 
       </div>
       {/* ------------------------------------Philosophy--------------------------------------- */}
