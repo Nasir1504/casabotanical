@@ -20,10 +20,7 @@
     }
 
 
-    .categorys {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
+    .categorys-web {
         grid-template-areas:
             ". dining dining dining decore decore ."
             ". storage storage accessory accessory accessory .";
@@ -98,6 +95,14 @@
 
         }
     }
+
+    .categorys-mobile {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scroll-snap-type: x mandatory;
+    }
+
 
     .philosophy {
         // border: 1px solid #000;

@@ -27,10 +27,10 @@ export default function Navbar() {
 
 
   return (
-    <main className="navbar-main grid grid-cols-[2fr_4fr_2fr] bg-[#835137] w-full h-25 items-center fixed z-10">
+    <main className="navbar-main grid max-xs:grid-cols-[2fr_5fr_3fr] xs:grid-cols-[2fr_4fr_2fr] bg-[#835137] w-full h-25 items-center fixed z-10">
 
       {/* --------------------------- NAV MENU WEB --------------------------- */}
-      <div className="menu-sec order-1 md:order-2 h-full w-full flex items-center max-md:pl-10">
+      <div className="menu-sec order-1 md:order-2 h-full w-full flex items-center max-xs:pl-5 xs:pl-10">
         <div className="hidden md:flex flex-col md:flex-row justify-center gap-5 items-center w-full list-none max-lg:text-[0.85rem] lg:text-[0.95rem] xl:text-[1.05rem] capitalize select-none">
           {
             NAVBAR_DATA.map((item, i) => {
@@ -94,11 +94,10 @@ export default function Navbar() {
         <div className={`${shopDrawerMob && "hidden"}`}>
 
           <svg
-            className="icon icon-hamburger w-6.5 h-6.5 md:hidden cursor-pointer"
+            className="icon icon-hamburger xs:w-6.5 xs:h-6.5 max-xs:w-5 max-xs:h-5 md:hidden cursor-pointer"
             xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none"
             viewBox="0 0 18 16"
             onClick={() => {
-              // setShopDrawerMob((p) => !p);
               setShopDrawerMob(true);
               setCatagoryType("none")
             }}
@@ -113,7 +112,7 @@ export default function Navbar() {
         {/* ------------------------ CROSS ICON -------------------------- */}
         <div className={`${!shopDrawerMob && "hidden"}`}>
           <svg
-            className="icon icon-close w-6.5 h-6.5 md:hidden cursor-pointer"
+            className="icon icon-close xs:w-6.5 xs:h-6.5 max-xs:w-5 max-xs:h-5  md:hidden cursor-pointer"
             xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 18 17"
             onClick={() => {
               setShopDrawerMob(false);
@@ -136,19 +135,17 @@ export default function Navbar() {
         <Image
           src={Logo}
           alt="logo"
-          className="logo-img"
+          className="logo-img max-sm:w-[50%] w-[35%] h-[60%]"
           style={{
-            width: "50%",
-            height: "60%",
             objectFit: "contain",
           }}
         />
       </Link>
 
       {/* ---------------------------OTHER ICON--------------------------- */}
-      <div className="extra-sec order-3 w-full flex justify-start items-center gap-8 overflow-hidden relative">
+      <div className="extra-sec order-3 w-full flex justify-start items-center max-xs:gap-5 xs:gap-8 overflow-hidden relative">
         <svg
-          className="h-5 w-5 text-[#D9D9D9] hover:text-[#ffffff] cursor-pointer"
+          className="xs:h-5 max-xs:h-4.5 xs:w-5 max-xs:w-4.5 text-[#D9D9D9] hover:text-[#ffffff] cursor-pointer"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 22 22"
@@ -167,7 +164,7 @@ export default function Navbar() {
 
         <Link href="/login" passHref>
           <svg
-            className="h-5 w-5 text-[#D9D9D9] hover:text-[#ffffff] cursor-pointer"
+            className="xs:h-5 max-xs:h-4.5 xs:w-5 max-xs:w-4.5 text-[#D9D9D9] hover:text-[#ffffff] cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             focusable="false"
@@ -184,7 +181,7 @@ export default function Navbar() {
         </Link>
 
         <svg
-          className="h-5 w-5 text-[#D9D9D9] hover:text-[#ffffff] cursor-pointer"
+          className="xs:h-5 max-xs:h-4.5 xs:w-5 max-xs:w-4.5 text-[#D9D9D9] hover:text-[#ffffff] cursor-pointer"
           aria-hidden="true"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +269,7 @@ export default function Navbar() {
       >
 
         {/* ------------------------ CROSS ICON -------------------------- */}
-        <div>
+        {/* <div>
           <svg
             className="icon icon-close w-6.5 h-6.5 md:hidden cursor-pointer absolute z-2 top-[2%] right-[4%]"
             xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 18 17"
@@ -284,7 +281,7 @@ export default function Navbar() {
             <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
             </path>
           </svg>
-        </div>
+        </div> */}
 
         <section
           className={`inner-section sm:w-[45%] max-sm:w-[55%] h-full bg-[#835137] flex text-[1.2rem] font-[500] tracking-wider overflow-hidden
