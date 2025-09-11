@@ -264,7 +264,7 @@ export default function Home() {
 
       {/* -----------------------------------Categorys---------------------------------------- */}
 
-      <h3 className="w-full text-center font-[600] pt-10 max-lg:text-[1rem] lg:text-[1.26rem] xl:text-[1.6rem] bg-[#232321] text-[#c5c5c5]">SHOP BY CATEGORY</h3>
+      <h3 className="w-full text-center font-[600] pt-10 max-lg:text-[1.26rem] lg:text-[1.26rem] xl:text-[1.6rem] bg-[#232321] text-[#c5c5c5]">SHOP BY CATEGORY</h3>
 
       {/* --------------------------- WEB -------------------------- */}
       <div className={`categorys-web relative w-full max-lg:h-[700px] lg:h-[900px] xl:h-[1050px] 
@@ -292,7 +292,10 @@ export default function Home() {
               className="bg-img w-full h-full hover:"
             />
           </div>
-          <p className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">HOME DECORE <span>&#x2192;</span></p>
+          <p className="flex max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem]">
+            <span>HOME DECORE</span>
+            <span>&#x2192;</span>
+          </p>
 
         </Link>
         <Link href="" passHref className="storage flex flex-col justify-start items-center gap-3 relative">
@@ -319,41 +322,64 @@ export default function Home() {
       </div>
 
       {/* --------------------------- MOBILE -------------------------- */}
-
-      <div className={`categorys-mobile relative w-full max-xs:h-[450px] h-[700px] text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4 
-        flex snap-x snap-mandatory snap-center overflow-x-scroll
+      <div className={`categorys-web relative w-full :h-auto xl:h-[1050px] 
+         text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4 sm:hidden flex justify-center flex-wrap items-start
         `}>
         {
           CATEGORY_DATA.map((item, i) => {
             return (
-              <Link
-                key={i}
-                href={item.linkTo}
-                passHref
-                className="dining flex flex-col justify-start items-center max-xs:gap-2 gap-5 relative min-w-full h-full shadow-[1px_2px_4px_#00000060]"
-              >
-                <div className="card w-full h-[88%] overflow-hidden">
+              <Link key={i} href={item.linkTo} passHref className="dining flex flex-col max-xs:gap-3 gap-4 justify-start items-center relative max-xs:w-[90%] max-sm:w-[75%] max-xs:h-[400px] max-sm:h-[550px]">
+                <div className="card w-full h-[80%]">
                   <Image
                     src={item.imgURL}
                     alt=""
                     placeholder="blur"
                     loading="lazy"
-                    className="bg-img w-full h-full"
-                    style={{
-                      objectFit: "cover"
-                    }}
+                    className="bg-img w-full h-full hover:"
                   />
                 </div>
-                <p className="max-xs:text-[1rem] text-[1.4rem] uppercase font-[600] tracking-wider">{item.name} <span>&#x2192;</span></p>
+                <p className="max-sm:text-[1.2rem] max-xs:text-[1rem] max-xs:font-[600] uppercase">{item.name} <span>&#x2192;</span></p>
 
               </Link>
             )
           })
         }
-
-
-
       </div>
+
+      {/* <div className={`categorys-mobile relative w-full max-xs:h-[450px] h-[700px] text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4 
+        flex justify-center items-center sm:hidden`}>
+        <div className="w-full h-[85%] bg-[#83513780] blur-lg absolute" />
+        <div className={`relative w-[100%] h-[90%] flex justify-start items-center snap-x snap-mandatory snap-center overflow-x-scroll overflow-y-hidden`}>
+
+          {
+            CATEGORY_DATA.map((item, i) => {
+              return (
+                <Link
+                  key={i}
+                  href={item.linkTo}
+                  passHref
+                  className="dining flex flex-col justify-start items-center max-xs:gap-2 gap-5 relative min-w-full h-full snap-x snap-mandatory snap-center"
+                >
+                  <div className="card w-[90%] h-[88%] overflow-hidden shadow-[1px_2px_4px_#00000060]">
+                    <Image
+                      src={item.imgURL}
+                      alt=""
+                      placeholder="blur"
+                      loading="lazy"
+                      className="bg-img w-full h-full"
+                      style={{
+                        objectFit: "cover"
+                      }}
+                    />
+                  </div>
+                  <p className="max-xs:text-[1rem] text-[1.4rem] uppercase font-[600] tracking-wider">{item.name} <span>&#x2192;</span></p>
+
+                </Link>
+              )
+            })
+          }
+        </div>
+      </div> */}
       {/* ------------------------------------Philosophy--------------------------------------- */}
 
       <div className="philosophy relative w-full max-lg:h-[250px] lg:h-[250px] xl:h-[280px] bg-[#232321] flex flex-col justify-center items-center gap-10" >
