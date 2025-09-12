@@ -322,14 +322,14 @@ export default function Home() {
       </div>
 
       {/* --------------------------- MOBILE -------------------------- */}
-      <div className={`categorys-web relative w-full :h-auto xl:h-[1050px] 
+      <div className={`categorys-web relative w-full max-sm:h-auto
          text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4 sm:hidden flex justify-center flex-wrap items-start
         `}>
         {
           CATEGORY_DATA.map((item, i) => {
             return (
-              <Link key={i} href={item.linkTo} passHref className="dining flex flex-col max-xs:gap-3 gap-4 justify-start items-center relative max-xs:w-[90%] max-sm:w-[75%] max-xs:h-[400px] max-sm:h-[550px]">
-                <div className="card w-full h-[80%]">
+              <Link key={i} href={item.linkTo} passHref className="dining flex flex-col justify-start items-center relative max-xs:w-[90%] max-sm:w-[75%] max-xs:h-[400px] max-xxs:h-[320px] max-sm:h-[550px]">
+                <div className="card w-full min-h-[85%]">
                   <Image
                     src={item.imgURL}
                     alt=""
@@ -338,7 +338,11 @@ export default function Home() {
                     className="bg-img w-full h-full hover:"
                   />
                 </div>
-                <p className="max-sm:text-[1.2rem] max-xs:text-[1rem] max-xs:font-[600] uppercase">{item.name} <span>&#x2192;</span></p>
+                <p
+                  className="h-[15%] flex justify-center items-center max-sm:text-[1.2rem] max-xxs:text-[0.85rem] max-xs:text-[1rem] max-xs:font-[600] uppercase"
+                >
+                  <span>{item.name}</span>&nbsp;<span>&#x2192;</span>
+                </p>
 
               </Link>
             )
@@ -382,11 +386,13 @@ export default function Home() {
       </div> */}
       {/* ------------------------------------Philosophy--------------------------------------- */}
 
-      <div className="philosophy relative w-full max-lg:h-[250px] lg:h-[250px] xl:h-[280px] bg-[#232321] flex flex-col justify-center items-center gap-10" >
+      <div className="philosophy relative w-full max-sm:h-auto max-lg:h-[250px] lg:h-[250px] xl:h-[280px] bg-[#232321] flex flex-col justify-center items-center gap-10" >
 
-        <h3 className="max-lg:text-[1rem] lg:text-[1.26rem] xl:text-[1.6rem] font-[600] text-[#c5c5c5] pt-10">THE COLOUR PHILOSOPHY</h3>
+        <h3 className="max-xs:text-[1.2rem] max-sm:text-[1.4rem] max-lg:text-[1rem] lg:text-[1.26rem] xl:text-[1.6rem] font-[600] text-[#c5c5c5] pt-10">THE COLOUR PHILOSOPHY</h3>
 
-        <div className="card-container w-full h-4/6 bg-[#232321] flex justify-center items-center gap-7">
+        {/* -------------------- Web ------------------------- */}
+
+        <div className="card-container w-full h-4/6 bg-[#232321] flex justify-center items-center gap-7 max-sm:hidden">
           {
             PHILOSOPHY_DATA.map((item, i) => {
               return (
@@ -405,22 +411,51 @@ export default function Home() {
           }
         </div>
 
+        {/* -------------------- Mobile ------------------------- */}
+
+        <div className={`card-container-mobile relative w-full  max-xs:h-[280px] h-[400px] text-[#c5c5c5] bg-[#232321] gap-10 pt-10 pb-4 
+                          flex justify-center items-center sm:hidden
+                          `}
+        >
+          <div className="w-full h-[100%] bg-[#83513780] blur-lg absolute" />
+          <div className={`relative w-[80%] max-xs:h-[220px] h-[320px] flex justify-start items-center snap-x snap-mandatory snap-center overflow-x-scroll overflow-y-hidden`}>
+
+            {
+              PHILOSOPHY_DATA.map((item, i) => {
+                return (
+                  <div key={i} className="card min-w-[100%] h-full flex flex-col justify-center items-center gap-2 bg-[#4e4841] snap-x snap-mandatory snap-center">
+                    <h4
+                      className="text-center font-bold text-[1.2rem]"
+                      style={{
+                        color: `#${item.textColor}`
+                      }}
+                    >{item.heading}</h4>
+                    <p className="text-center text-[#c5c5c5] text-[1rem] leading-5">{item.details}</p>
+
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
 
       </div>
 
       {/* ------------------------------------Collection--------------------------------------- */}
 
-      <h3 className="w-full text-center font-[600] pt-10 pb-10 max-lg:text-[1rem] lg:text-[1.26rem] xl:text-[1.6rem] bg-[#232321] text-[#c5c5c5]">SHOP BY COLLECTION</h3>
+      <h3
+        className="w-full text-center font-[600] pt-10 pb-10 max-lg:text-[1rem] lg:text-[1.26rem] xl:text-[1.6rem] bg-[#232321] text-[#c5c5c5]"
+      >SHOP BY COLLECTION</h3>
 
       <div
-        className="collection relative text-[#c5c5c5] w-full max:lg:h-auto lg:h-[900px] xl:h-[1050px] bg-[#232321] px-55">
+        className="collection relative text-[#c5c5c5] w-full max:lg:h-auto lg:h-[900px] xl:h-[1050px] bg-[#232321] md:px-55">
 
-        <div className="cc-container w-full h-full grid grid-cols-[1fr_1fr] max-lg:grid-cols-[1fr] gap-10 py-5">
+        <div className="cc-container w-full h-full grid grid-cols-[1fr_1fr] max-md:grid-cols-[1fr] gap-10 py-5 max-lg:justify-items-center">
 
           {
             COLLECTION_DATA.map((item, i) => {
               return (
-                <Link key={i} href="###" passHref className="product-card h-4/4 flex flex-col justify-start items-center relative">
+                <Link key={i} href="###" passHref className="product-card max-sm:w-[85%] max-md:w-[70%] w-[100%] h-[100%] flex flex-col justify-start items-center relative">
                   <div className="card w-full">
                     <Image src={item.imgURL} alt=""
                       placeholder="blur"
@@ -439,18 +474,18 @@ export default function Home() {
 
       {/* ------------------------------------------------------------------------------------- */}
 
-      <div className="w-full h-45 flex justify-center items-center gap-2 bg-[#232321]">
+      <div className="w-full h-45 max-xs:h-50 flex justify-center items-center gap-2 bg-[#232321]">
 
         <div
-          className="w-2/5 h-4/5 bg-[#ffffff07] text-[#c5c5c5] flex flex-col justify-center items-center gap-2"
+          className="max-xs:w-4/5 max-sm:w-3/5 w-2/5 h-4/5 bg-[#ffffff07] text-[#c5c5c5] flex flex-col justify-center items-center gap-2"
           style={{
             backdropFilter: "blur(10px)",
           }}
         >
           <h4
-            className="text-center lg:text-[1.2rem] xl:text-[1.4rem]"
+            className="text-center max-xs:text-[1rem] lg:text-[1.2rem] xl:text-[1.4rem]"
           >CASA BOTANICAL</h4>
-          <p className="text-center font-[300] px-10 lg:text-[0.95rem] xl:text-[1.2rem] lg:leading-6 xl:leading-7">
+          <p className="text-center font-[300] max-xs:px-5 px-10 max-xs:text-[0.9rem] lg:text-[0.95rem] xl:text-[1.2rem] lg:leading-6 xl:leading-7">
             Because every room deserves its own verse, every corner its own mood, and every moment the dignity of intentional design.
           </p>
         </div>
@@ -461,9 +496,11 @@ export default function Home() {
 
       {/* ------------------------------------Product--------------------------------------- */}
 
-      <h3 className="bg-[#232321] w-full text-center text-[#c5c5c5] lg:text-[1.26rem] xl:text-[1.6rem] font-[500] py-5">SHOP BY PRODUCT</h3>
+      <h3 className="bg-[#232321] w-full text-center text-[#c5c5c5] max-xxs:text-[1.2rem]  max-xs:text-[1.4rem]  max-sm:text-[1.6rem] lg:text-[1.26rem] xl:text-[1.6rem] font-[500] py-5">SHOP BY PRODUCT</h3>
 
-      <div className="product w-full max-lg:h-auto lg:h-[920px] xl:h-[1150px] bg-[#232321] text-[#c5c5c5] px-55 md:px-40" >
+
+      {/* --------------------------- WEB ------------------------------- */}
+      <div className="product w-full max-lg:h-auto lg:h-[920px] xl:h-[1150px] bg-[#232321] text-[#c5c5c5] max-md:px-20 md:px-30 max-sm:hidden" >
 
         <div className="pc-container w-full h-full grid grid-cols-[1fr_1fr_1fr] max-lg:grid-cols-[1fr_1fr] gap-10 py-5">
 
@@ -493,9 +530,36 @@ export default function Home() {
 
 
         </div>
+      </div>
 
+      {/* --------------------------- MOBILE ------------------------------- */}
 
+      <div className="product w-full max-xxs:h-[380px] max-xs:h-[460px] h-[560px] bg-[#232321] text-[#c5c5c5] sm:hidden" >
 
+        <div className="pc-container w-full h-full flex gap-5 py-5">
+
+          {
+            PRODUCT_DATA.map((item, i) => {
+              return (
+                <Link key={i} href={item.linkTo} passHref
+                  className="product-card flex flex-col justify-start items-center min-w-[90%] relative h-full"
+                >
+                  <div className="card w-full h-[85%] overflow-hidden">
+                    <Image src={item.imgURL} alt=""
+                      placeholder="blur"
+                      loading="lazy"
+                      className="bg-img w-full h-full"
+                    />
+                  </div>
+                  <p className="flex items-center h-[15%] max-xxs:text-[1rem]  max-xs:text-[1.2rem]  max-sm:text-[1.4rem] ">{item.name} <span>&#x2192;</span></p>
+
+                </Link>
+              )
+            })
+
+          }
+
+        </div>
       </div>
 
       <div className="w-full h-15 bg-[#232321]" />
@@ -504,32 +568,34 @@ export default function Home() {
 
       {/* ------------------------------------Counterpart--------------------------------------- */}
 
-      <div className="welcome-content relative w-full max-lg:h-[500px] lg:h-[645px] xl:h-[785px] flex justify-center items-center gap-20 bg-[#5e5e5e]" >
+      <div
+        className="welcome-content relative w-full max-sm:h-auto max-sm:py-10 max-lg:h-[500px] lg:h-[645px] xl:h-[785px] max-sm:flex-col flex justify-center items-center max-sm:gap-10 gap-20 bg-[#5e5e5e]"
+      >
 
         <Image src={Rutezin} alt=""
           placeholder="blur"
           loading="lazy"
-          className="w-[45%] objectFit-contain rounded-md md:rounded-lg lg:rounded-xl"
+          className="w-[45%] max-sm:w-[85%]  max-sm:h-[40%] objectFit-contain max-sm:rounded-xl rounded-md md:rounded-lg lg:rounded-xl"
         />
 
-        <article className="w-[40%] max-lg:px-10 px-20 bg-[#232321] py-12">
-          <h3 className="max-lg:text-[1rem] lg:text-[1.26rem] xl:text-[1.6rem] text-[#c5c5c5]">Our Botanical Counterpart- Rutezin</h3>
+        <article className="w-[40%] max-sm:w-[85%] max-xs:px-6 max-lg:px-10 px-20 bg-[#232321] max-sm:rounded-xl py-12">
+          <h3 className="max-xxs:text-[1.1rem] max-xs:text-[1.2rem] max-sm:text-[1.4rem] max-lg:text-[1rem] lg:text-[1.26rem] xl:text-[1.6rem] text-[#c5c5c5]">Our Botanical Counterpart- Rutezin</h3>
           <br />
           <p
-            className="font-thin max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem] text-[#c5c5c5]"
+            className="font-thin max-xxs:text-[0.8rem] max-xs:text-[1rem] max-sm:text-[1.1rem] max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem] text-[#c5c5c5]"
           >
             At Casa Botanical, we believe in celebrating thoughtful design and the natural world in every detail. That philosophy extends to our sister brand, Rutezin.
           </p>
           <br />
           <p
-            className="font-thin max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem] text-[#c5c5c5]"
+            className="font-thin font-thin max-xxs:text-[0.8rem] max-xs:text-[1rem] max-sm:text-[1.1rem] max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem] text-[#c5c5c5]"
           >
             Rutezin crafts artisanal resin jewellery and decor that preserves real botanicals in every piece, turning nature’s fleeting beauty into lasting art. Each design is unique, highlighting the organic shapes, textures, and colours of flowers and foliage in stunning, wearable form.
           </p>
           <br />
           <br />
 
-          <Link href="/blogs" passHref className="max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem] text-[#c5c5c5] bg-[#835137] px-8 py-3 round rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:text-[#fff]" >rutezin.com</Link>
+          <Link href="/blogs" passHref className="font-thin max-xxs:text-[0.85rem] max-xs:text-[1rem] max-sm:text-[1.1rem] max-lg:text-[0.7rem] lg:text-[0.95rem] xl:text-[1.2rem] text-[#c5c5c5] bg-[#835137] px-8 py-3 round rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:text-[#fff]" >rutezin.com</Link>
 
 
         </article>
