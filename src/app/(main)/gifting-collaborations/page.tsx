@@ -16,11 +16,11 @@ import Frame5 from "../../assets/imgs/gifting-collections/weddings.png";
 
 export default function GiftingCollaborations() {
     return (
-        <div className="gifting-collaborations-main w-full h-auto flex flex-col justify-center items-center bg-[#232321]">
+        <div className="gifting-collaborations-main w-full h-auto flex flex-col justify-center items-center bg-[#232321] overflow-hidden">
             <div className="w-full h-[150px]" />
 
-            <section className="w-full xl:h-[1250px] lg:h-[995px] max-lg:h-[855px] flex justify-center items-start gap-[5%]">
-                <div className="w-[40%] h-[95%]">
+            <section className="w-full xl:h-[1250px] lg:h-[995px] max-lg:h-[855px] max-sm:h-[955px] max-xs:h-[1255px] max-xxs:h-[1400px] max-sm:flex-col flex justify-center max-sm:items-center items-start max-xs:gap-[2%] gap-[5%]">
+                <div className="w-[40%] max-sm:w-[90%] h-[95%] max-sm:h-[40%] max-xxs:h-[30%]">
                     <Image
                         src={Frame1}
                         alt=""
@@ -31,11 +31,11 @@ export default function GiftingCollaborations() {
                     />
                 </div>
 
-                <div className="w-[40%] h-[80%] flex flex-col justify-start items-start gap-6">
+                <div className="w-[40%] max-sm:w-[100%] h-[80%] flex flex-col justify-start items-start gap-6 max-sm:px-5 relative">
                     <h3
-                        className="max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
+                        className="max-sm:text-[1.4rem] max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
                     >Collaborate with Casa Botanical</h3>
-                    <p className="max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] max-lg:leading-6 lg:leading-7 xl:leading-9 tracking-widest">
+                    <p className="max-sm:text-[0.8rem] max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] max-lg:leading-6 lg:leading-7 xl:leading-9 tracking-widest max-sm:leading-5">
                         Elevate Your Experience. Impress Your Guests. Delight Your Clients.
                         <br />
                         <br />
@@ -53,7 +53,7 @@ export default function GiftingCollaborations() {
                     <Link
                         href="/collections"
                         passHref
-                        className="bg-[#835137] py-[0.6rem] px-[2.5rem] rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:shadow-lg text-center text-[#c5c5c5] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.4rem] hover:text-[#fff]"
+                        className="bg-[#835137] py-[0.6rem] px-[2.5rem] rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:shadow-lg text-center text-[#c5c5c5] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.4rem] hover:text-[#fff] max-sm:absolute right-10 bottom-[0%]"
                     >Shop Now</Link>
                 </div>
             </section>
@@ -61,17 +61,27 @@ export default function GiftingCollaborations() {
 
             {/* ----------------------------------------------------------------------- */}
 
-            <section className="w-full xl:h-[750px] lg:h-[580px] max-lg:h-[455px] flex justify-center items-center gap-[5%]">
+            <section className="w-full xl:h-[750px] lg:h-[580px] max-lg:h-[455px] max-xs:h-[655px] max-xxs:h-[705px] flex max-xs:flex-col justify-center items-center gap-[5%]">
+                <div className="w-[90%] h-[50%] xs:hidden max-xs:mt-15">
+                    <Image
+                        src={Frame2}
+                        alt=""
+                        className="w-full h-full"
+                        style={{ objectFit: "cover" }}
+                        placeholder="blur"
+                        loading="lazy"
+                    />
+                </div>
 
-                <div className="w-[40%] h-[80%] flex flex-col justify-center items-start gap-6">
+                <div className="w-[40%] h-[80%] max-xs:w-[90%] max-xs:h-[40%] flex flex-col justify-center items-start gap-6">
                     <h3
-                        className="max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
+                        className="max-xs:text-[1.4rem] max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
                     >Retailers</h3>
                     <p className="max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] max-lg:leading-6 lg:leading-7 xl:leading-9 tracking-widest">
                         Stock your shelves with timeless, coordinated design. Casa Botanical offers retailers a range of elegant, high-quality products that appeal to customers looking for luxury without compromise. From artisanal trays and coasters to complete dining hampers and décor sets, our collections blend seamlessly into modern, classic, and eclectic store environments. Give your customers something truly special to take home.
                     </p>
                 </div>
-                <div className="w-[40%] h-[80%]">
+                <div className="w-[40%] h-[80%] max-xs:hidden">
                     <Image
                         src={Frame2}
                         alt=""
@@ -85,10 +95,12 @@ export default function GiftingCollaborations() {
             </section>
 
 
+
+
             {/* ----------------------------------------------------------------------- */}
 
-            <section className="w-full xl:h-[750px] lg:h-[580px] max-lg:h-[455px] flex justify-center items-center gap-[5%]">
-                <div className="w-[40%] h-[80%]">
+            <section className="w-full xl:h-[750px] lg:h-[580px] max-lg:h-[455px] max-xs:h-[855px] flex max-xs:flex-col justify-center items-center max-xs:gap-[8%] gap-[5%]">
+                <div className="w-[40%] max-xs:w-[90%] max-xs:h-[40%] h-[80%]">
                     <Image
                         src={Frame3}
                         alt=""
@@ -98,9 +110,9 @@ export default function GiftingCollaborations() {
                         loading="lazy"
                     />
                 </div>
-                <div className="w-[40%] h-[80%] flex flex-col justify-center items-start gap-6">
+                <div className="w-[40%] max-xs:w-[90%] max-xs:h-[40%] h-[80%] flex flex-col justify-center items-start gap-6 max-xs:px-5">
                     <h3
-                        className="max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
+                        className="max-sm:text-[1.2rem] max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
                     >Restaurants and Hotels</h3>
                     <p className="max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] max-lg:leading-6 lg:leading-7 xl:leading-9 tracking-widest">
                         Your space is your brand. Every detail contributes to the story you tell your guests. Casa Botanical offers sophisticated solutions to elevate your dining tables, suites, and common areas. Our coordinated sets of coasters, placemats, napkin rings, and trays ensure a polished, harmonious look, while our premium materials promise durability for high-volume use. Impress your patrons with thoughtful, elegant touches that make every visit memorable.
@@ -111,17 +123,26 @@ export default function GiftingCollaborations() {
 
             {/* ----------------------------------------------------------------------- */}
 
-            <section className="w-full xl:h-[750px] lg:h-[580px] max-lg:h-[455px] flex justify-center items-center gap-[5%]">
-
-                <div className="w-[40%] h-[80%] flex flex-col justify-center items-start gap-6">
+            <section className="w-full xl:h-[750px] lg:h-[580px] max-lg:h-[455px] max-xs:h-[655px] flex max-xs:flex-col justify-center items-center gap-[5%] max-xs:gap-[5%]">
+                <div className="w-[90%] h-[50%] xs:hidden max-xs:mt-15">
+                    <Image
+                        src={Frame4}
+                        alt=""
+                        className="w-full h-full"
+                        style={{ objectFit: "cover" }}
+                        placeholder="blur"
+                        loading="lazy"
+                    />
+                </div>
+                <div className="w-[40%] h-[80%] max-xs:w-[90%] max-xs:h-[40%] flex flex-col justify-center items-start gap-6">
                     <h3
-                        className="max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
+                        className="max-xs:text-[1.2rem] max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
                     >Corporate Events</h3>
                     <p className="max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] max-lg:leading-6 lg:leading-7 xl:leading-9 tracking-widest">
                         Show your clients, partners, and teams you value them with gifts that stand out. Casa Botanical’s curated hampers are perfect for corporate gifting—sophisticated, practical, and memorable. From festive end-of-year gifts to VIP client thank-yous, our premium sets signal professionalism and good taste, leaving a lasting impression that goes beyond the moment.
                     </p>
                 </div>
-                <div className="w-[40%] h-[80%]">
+                <div className="w-[40%] h-[80%] max-xs:hidden">
                     <Image
                         src={Frame4}
                         alt=""
@@ -136,8 +157,8 @@ export default function GiftingCollaborations() {
 
             {/* ----------------------------------------------------------------------- */}
 
-            <section className="w-full xl:h-[750px] lg:h-[580px] max-lg:h-[455px] flex justify-center items-center gap-[5%]">
-                <div className="w-[40%] h-[80%]">
+            <section className="w-full xl:h-[750px] lg:h-[580px] max-lg:h-[455px] max-xs:h-[655px] flex max-xs:flex-col justify-center items-center gap-[5%]">
+                <div className="w-[40%] h-[80%] max-xs:w-[90%] max-xs:h-[40%] ">
                     <Image
                         src={Frame5}
                         alt=""
@@ -147,9 +168,9 @@ export default function GiftingCollaborations() {
                         loading="lazy"
                     />
                 </div>
-                <div className="w-[40%] h-[80%] flex flex-col justify-center items-start gap-6">
+                <div className="w-[40%] h-[80%]  max-xs:w-[90%] max-xs:h-[40%] flex flex-col justify-center items-start gap-6">
                     <h3
-                        className="max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
+                        className="max-xs:text-[1.2rem] max-lg:text-[1.8rem] lg:text-[2.5rem] xl:text-[3.2rem] font-[500]"
                     >Weddings and Celebrations</h3>
                     <p className="max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] max-lg:leading-6 lg:leading-7 xl:leading-9 tracking-widest">
                         Celebrate life’s biggest moments with elegance. Casa Botanical offers bespoke hamper solutions and décor accents perfect for weddings and special occasions. Our coordinated designs make exceptional gifts for couples starting a new chapter, while our stylish trays, vases, and tableware elevate receptions and dinners with cohesive, luxurious charm. Create memories wrapped in beauty.
@@ -160,8 +181,8 @@ export default function GiftingCollaborations() {
 
             {/* ----------------------------------------------------------------------- */}
 
-            <h3 className="max-lg:text-[1.1rem] lg:text-[1.3rem] xl:text-[1.5rem] tracking-widest font-[600] xl:w-[580px] lg:w-[520px] max-xl:w-[420px] text-center">{"Let's Create Something Beautiful Together"}</h3>
-            <p className="max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] tracking-widest] xl:w-[540px] lg:w-[440px] max-xl:w-[340px] text-center">Elevate Your Experience. Impress Your Guests. Delight Your Clients</p>
+            <h3 className="max-xs:text-[0.85rem] max-lg:text-[1.1rem] lg:text-[1.3rem] xl:text-[1.5rem] tracking-widest font-[600] xl:w-[580px] lg:w-[520px] max-xl:w-[420px] max-xs:w-[340px] text-center max-xs:mt-10">{"Let's Create Something Beautiful Together"}</h3>
+            <p className="max-xs:text-[0.78rem] max-lg:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] font-[300] tracking-widest] xl:w-[540px] lg:w-[440px] max-xl:w-[340px] max-xs:w-[260px] text-center">Elevate Your Experience. Impress Your Guests. Delight Your Clients</p>
             <br />
 
             <section className="xl:w-[580px] w-[580px]">
@@ -170,7 +191,7 @@ export default function GiftingCollaborations() {
 
             {/* ----------------------------------------------------------------------- */}
 
-            <section className="w-full xl:h-[300px] lg:h-[220px] max-lg:h-[150px]">
+            <section className="w-full xl:h-[300px] lg:h-[220px] max-lg:h-[150px] max-xs:h-[100px] ">
                 <ClientsCarousel />
             </section>
 
