@@ -49,7 +49,7 @@ export default function ClientsCarousel() {
                     CLIENTS_LOGO_DATA.map((item, i) => {
                         return (
                             <div key={i}
-                                className="inline-block min-w-60 h-[55%] mx-2 flex items-center justify-center">
+                                className="inline-block min-w-60 max-xs:min-w-20 h-[55%] mx-2 flex items-center justify-center">
                                 <Image
                                     src={item.imgURL}
                                     alt=""
@@ -70,7 +70,7 @@ export default function ClientsCarousel() {
                     CLIENTS_LOGO_DATA.map((item, i) => {
                         return (
                             <div key={i}
-                                className="inline-block min-w-60 h-[55%] mx-2 flex items-center justify-center">
+                                className="inline-block min-w-60 max-xs:min-w-20 h-[55%] mx-2 flex items-center justify-center">
                                 <Image
                                     src={item.imgURL}
                                     alt=""

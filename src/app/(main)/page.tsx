@@ -37,6 +37,8 @@ export default function Home() {
 
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [scrolling, setScrolling] = useState(0);
+  const [slide, setSlide] = useState(0)
+
 
   const PHILOSOPHY_DATA = [
     {
@@ -157,6 +159,21 @@ export default function Home() {
     }
 
   ]
+
+  const prevSlide = () => {
+    setSlide((prev) => Math.max(prev - 1, 0));
+
+  };
+
+  const nextSlide = () => {
+    setSlide((prev) => Math.min(prev + 1, PHILOSOPHY_DATA.length - 1));
+  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlide((prev) => (prev + 1) % PHILOSOPHY_DATA.length);
+    }, 5000); // change every 5 seconds
+    return () => clearInterval(interval);
+  }, [PHILOSOPHY_DATA.length]);
 
   useEffect(() => {
     const handleWindowMouseMove = (event: MouseEvent) => {
@@ -418,25 +435,70 @@ export default function Home() {
                           `}
         >
           <div className="w-full h-[100%] bg-[#83513780] blur-lg absolute" />
-          <div className={`relative w-[80%] max-xs:h-[220px] h-[320px] flex justify-start items-center snap-x snap-mandatory snap-center overflow-x-scroll overflow-y-hidden`}>
+          <div className={`relative w-[80%] max-xs:h-[220px] h-[320px] flex justify-start items-center overflow-hidden`}>
 
             {
               PHILOSOPHY_DATA.map((item, i) => {
                 return (
-                  <div key={i} className="card min-w-[100%] h-full flex flex-col justify-center items-center gap-2 bg-[#4e4841] snap-x snap-mandatory snap-center">
-                    <h4
-                      className="text-center font-bold text-[1.2rem]"
-                      style={{
-                        color: `#${item.textColor}`
-                      }}
-                    >{item.heading}</h4>
-                    <p className="text-center text-[#c5c5c5] text-[1rem] leading-5">{item.details}</p>
+                  <div key={i}
+                    className={`card min-w-[100%] h-full flex justify-center items-center bg-[#4e4841] duration-700 ease-in-out`}
+                    style={{
+                      transform: `translate(-${slide * 100}%)`,
+                    }}
+                  >
+                    <div
+                      className="flex flex-col justify-center items-center gap-2 max-sm:px-20 max-xs:px-5"
+                    >
+                      <h4
+                        className="text-center font-bold text-[1.2rem]"
+                        style={{
+                          color: `#${item.textColor}`
+                        }}
+                      >{item.heading}</h4>
+                      <p className="text-center text-[#c5c5c5] text-[1rem] leading-5">{item.details}</p>
+                    </div>
 
                   </div>
                 )
               })
             }
+
+            <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3 z-2">
+              {PHILOSOPHY_DATA.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setSlide(idx)}
+                  className={`w-3 h-3 rounded-full ${idx === slide ? "bg-white" : "bg-[#c5c5c5]"
+                    }`}
+                  aria-label={`Slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+
+
           </div>
+
+          <button
+            onClick={prevSlide}
+            type="button" className="absolute top-0 start-[-0.6em] z-3 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#835137]">
+              <svg className="w-4 h-4 text-[#c5c5c5] rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+
+          <button
+            onClick={nextSlide}
+            type="button" className="absolute top-0 end-[-0.6em] z-3 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#835137]">
+              <svg className="w-4 h-4 text-[#c5c5c5] rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
         </div>
 
       </div>

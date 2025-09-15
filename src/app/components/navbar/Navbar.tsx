@@ -313,6 +313,10 @@ export default function Navbar() {
                       href={`${item.linkTo}`}
                       passHref
                       className={`capitalize sm:text-[1.2rem] xs:text-[1.1rem] max-xs:text-[1rem]`}
+                      onClick={() => {
+                        setShopDrawerMob(false);
+                        setCatagoryType("none")
+                      }}
                     >
                       {item.name}
                     </Link>
