@@ -2,8 +2,8 @@
 
 export default function PrivacyPolicy() {
     return (
-        <div className="flex flex-col gap-3 w-full h-auto px-80 py-35 text-[#c5c5c5] bg-[#232321]">
-            <h2 className="xl:text-[3.5rem] lg:text-[3rem] max-lg:text-[2.5rem]">Privacy Policy</h2>
+        <div className="flex flex-col gap-3 w-full h-auto px-80 max-lg:px-60 max-md:px-40 max-sm:px-25 max-xs:px-10 py-35 text-[#c5c5c5] bg-[#232321]">
+            <h2 className="xl:text-[3.5rem] lg:text-[3rem] max-lg:text-[2.5rem] max-md:text-[2rem]">Privacy Policy</h2>
             <br />
             <p className="xl:text-[1.1rem] lg:text-[0.95rem] max-lg:text-[0.85rem] ">www.casabotanical.com (the “Website”) is committed to protecting your privacy. This privacy policy (the “Policy”) explains how the Website collects, uses, and discloses your personal information. By using the Website, you consent to the collection, use, and disclosure of your personal information in accordance with this Policy.</p>
 

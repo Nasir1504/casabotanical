@@ -2,8 +2,8 @@
 
 export default function TermsConditions() {
     return (
-        <div className="flex flex-col gap-3 w-full h-auto px-80 py-35 text-[#c5c5c5] bg-[#232321]">
-            <h2 className="xl:text-[3.5rem] lg:text-[3rem] max-lg:text-[2.5rem]">Terms & Conditions</h2>
+        <div className="flex flex-col gap-3 w-full h-auto px-80 max-lg:px-60 max-md:px-40 max-sm:px-25 max-xs:px-10 py-35 text-[#c5c5c5] bg-[#232321]">
+            <h2 className="xl:text-[3.5rem] lg:text-[3rem] max-lg:text-[2.5rem] max-md:text-[2rem]">Terms & Conditions</h2>
 
             <br />
             <p className="xl:text-[1.1rem] lg:text-[0.95rem] max-lg:text-[0.85rem] ">Welcome to www.casabotanical.com (the “Website”). These terms and conditions (the “Terms”) govern your use of the Website. By using the Website, you agree to be bound by these Terms.</p>
