@@ -13,7 +13,7 @@ export default function Collections() {
   return (
     <div className="collections-main w-full h-auto flex flex-col justify-center items-center bg-[#232321]">
       <div className="w-full h-[150px]" />
-      <div className="card-container grid lg:grid-cols-[1fr_1fr_1fr] max-lg:grid-cols-[1fr_1fr] w-[80%] justify-items-center items-start p-6 gap-x-6 gap-y-10">
+      <div className="card-container grid lg:grid-cols-[1fr_1fr_1fr] max-lg:grid-cols-[1fr_1fr] max-md:grid-cols-[1fr] w-[80%] justify-items-center items-start p-6 max-xs:p-0 gap-x-6 gap-y-10">
         {
           COLLECTIONS_CARD_DATA.map((item, i) => {
             return <CollectionsCard
