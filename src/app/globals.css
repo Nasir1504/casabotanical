@@ -26,7 +26,7 @@
   --breakpoint-lg: 1500px;
   --breakpoint-xl: 1920px;
 
-   --animate-slide-left: slide-left 12s linear infinite;
+   --animate-slide-left: slide-left 20s linear infinite;
 
   @keyframes slide-left {
     0% { transform: translateX(0); }

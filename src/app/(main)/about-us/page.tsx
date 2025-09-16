@@ -8,10 +8,10 @@ import AboutUsImg from "../../assets/imgs/about-us/about-us_image.png";
 
 export default function page() {
     return (
-        <div className="about-us-main bg-[#232321] w-fullh-auto flex justify-center items-start py-45 px-20 max-lg:py-35 max-lg:px-25 relative">
+        <div className="about-us-main bg-[#232321] w-fullh-auto flex max-sm:flex-col justify-center items-start py-45 px-20 max-lg:py-35 max-lg:px-25 max-xs:px-5 relative">
 
             <Image
-                className="w-[45%] xl:h-[680px] lg:h-[620px] max-lg:h-[580px]"
+                className="w-[45%] max-sm:w-[100%] xl:h-[680px] lg:h-[620px] max-lg:h-[580px] max-sm:h-[400px]"
                 src={AboutUsImg}
                 alt=""
                 placeholder="empty"
@@ -21,7 +21,8 @@ export default function page() {
                 }}
             />
 
-            <section className="right-content flex flex-col pl-20 text-[#c5c5c5] gap-5">
+            <section className="right-content flex flex-col pl-20 max-sm:pl-5 max-sm:pr-5 max-xs:p-2 text-[#c5c5c5] gap-5">
+                <br className="sm:hidden"/>
                 <h3 className="xl:text-[2rem] lg:text-[1.6rem] max-lg:text-[1.4rem]">WELCOME TO CASA BOTANICAL!</h3>
 
                 <p className="xl:text-[1.1rem] lg:text-[0.9rem] max-lg:text-[0.85rem] tracking-wider">
@@ -46,7 +47,7 @@ export default function page() {
                 <Link
                     href="/collections"
                     passHref
-                    className="bg-[#835137] w-[25%] py-[0.6rem] rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:shadow-lg text-center text-[#c5c5c5] max-lg:text-[0.95rem] lg:text-[1.1rem] xl:text-[1.2rem] hover:text-[#fff]"
+                    className="bg-[#835137] w-[25%] max-xs:w-[35%] py-[0.6rem] rounded-md md:rounded-lg lg:rounded-xl cursor-pointer hover:shadow-lg text-center text-[#c5c5c5] max-lg:text-[0.95rem] lg:text-[1.1rem] xl:text-[1.2rem] hover:text-[#fff]"
                 >Shop Now</Link>
             </section>
 

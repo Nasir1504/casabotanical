@@ -37,8 +37,8 @@ export default async function page({ params }: {
     });
 
     return (
-        <div className="individual-blog-main w-full h-auto bg-[#232321] flex flex-col justify-center items-start gap-20 px-[15%] pt-[4%]">
-            <section className="blog-cover-main w-full max-lg:h-[450px] lg:h-[550px] xl:h-[750px] flex">
+        <div className="individual-blog-main w-full h-auto bg-[#232321] flex flex-col justify-center items-start gap-20 max-xs:gap-10 px-[15%] max-xs:px-[5%] pt-[4%]">
+            <section className="blog-cover-main w-full max-xs:h-[400px] lg:h-[550px] xl:h-[750px] flex">
                 <Image
                     className="w-full h-full"
                     style={{
